@@ -17,7 +17,7 @@ namespace Messaging_App
             InitializeComponent();
             showMessages();
             Text = "Messaging App - Show Messages";
-            this.StartPosition = FormStartPosition.CenterScreen;
+            StartPosition = FormStartPosition.CenterScreen;
         }
         private void showMessages()
         {
@@ -33,11 +33,12 @@ namespace Messaging_App
             }
         }
         private void btnDelete_Click(object sender, EventArgs e)
-        {   
+        {
             try
             {   //if message highlighted then delete that from global list
                 TextMessageList.messagesList.RemoveAt(lstMessages.SelectedIndex);
-            } catch (Exception)
+            }
+            catch (Exception)
             {   //if no message selected then show error message
                 MessageBox.Show("You must select a message to Delete", "No Message Selected", MessageBoxButtons.OK, MessageBoxIcon.Hand);
             } //Reload data on list box
@@ -57,7 +58,6 @@ namespace Messaging_App
                 {   //For selected message show all elements in the listbox view
                     int index = lstMessages.SelectedIndex;
                     lstMessages.Items.Clear();
-
                     lstMessages.Items.Add("Sender\t\t\t" + TextMessageList.messagesList[index].Sender);
                     lstMessages.Items.Add("Recipient\t\t\t" + TextMessageList.messagesList[index].Recipient);
                     lstMessages.Items.Add("Message\t\t\t" + TextMessageList.messagesList[index].TextContent);
@@ -71,11 +71,14 @@ namespace Messaging_App
                     (sender as Button).Text = "&Back";
                     //Hide Delete Button
                     btnDelete.Visible = false;
-                } catch (Exception ex){ //If no message selected show error message
+                }
+                catch (Exception ex)
+                { //If no message selected show error message
                     MessageBox.Show("You must select a message to read\n ", "No Message Selected", MessageBoxButtons.OK, MessageBoxIcon.Hand);
                     showMessages();
                 }
-                } else //if message text is back
+            }
+            else //if message text is back
             {   //Reload data for listbox
                 showMessages();
                 //Change button text to Read

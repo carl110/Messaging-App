@@ -38,7 +38,7 @@ namespace Messaging_App
         private void btnHelp_Click(object sender, EventArgs e)
         {   //Show a message box containing the help txt saved in the project file
             string helpTxt = File.ReadAllText(@"help.txt");
-            MessageBox.Show(helpTxt, "Help Menu", MessageBoxButtons.OK,MessageBoxIcon.Information);
+            MessageBox.Show(helpTxt, "Help Menu", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
     }
 }

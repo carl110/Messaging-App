@@ -22,7 +22,6 @@ namespace Messaging_App
             lblFileName.Visible = false;
             txtFileName.Visible = false;
         }
-
         private bool checkNotEmpty()
         {   //Check each txtfield if empty
             if (txtSender.TextLength == 0)
@@ -52,11 +51,10 @@ namespace Messaging_App
             }
             return true;
         }
-
         private void rdoSMS_CheckedChanged(object sender, EventArgs e)
         {   //If SMS selected hide MMS specific items
             if ((sender as RadioButton).Checked)
-            {   
+            {
                 gboMultimediaType.Visible = false;
                 lblFileName.Visible = false;
                 txtFileName.Visible = false;
@@ -77,10 +75,12 @@ namespace Messaging_App
             if (rdoAudio.Checked)
             {
                 multiMediaType = AttachmentType.Audio.ToString();
-            } else if (rdoPicture.Checked) 
+            }
+            else if (rdoPicture.Checked)
             {
                 multiMediaType = AttachmentType.Picture.ToString();
-            } else if (rdoVideo.Checked)
+            }
+            else if (rdoVideo.Checked)
             {
                 multiMediaType = AttachmentType.Video.ToString();
             }
