@@ -49,7 +49,7 @@ namespace Messaging_App
         }
         private void btnRead_Click(object sender, EventArgs e)
         {   //if button text is Read
-            if ((sender as Button).Text == "Read")
+            if ((sender as Button).Text == "&Read")
             {
                 try
                 {   //For selected message show all elements in the listbox view
@@ -66,7 +66,7 @@ namespace Messaging_App
                         lstMessages.Items.Add("Media Type\t\t" + TextMessageList.messagesList[index].AttachmentType);
                         lstMessages.Items.Add("File Name\t\t" + TextMessageList.messagesList[index].AttachmentTypeFile);
                     } //Change button text to Back
-                    (sender as Button).Text = "Back";
+                    (sender as Button).Text = "&Back";
                     //Hide Delete Button
                     btnDelete.Visible = false;
                 } catch (Exception ex){ //If no message selected show error message
@@ -77,7 +77,7 @@ namespace Messaging_App
             {   //Reload data for listbox
                 showMessages();
                 //Change button text to Read
-                (sender as Button).Text = "Read";
+                (sender as Button).Text = "&Read";
                 //set delete button to visable
                 btnDelete.Visible = true;
             }
