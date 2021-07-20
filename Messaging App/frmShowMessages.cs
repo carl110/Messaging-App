@@ -16,6 +16,8 @@ namespace Messaging_App
         {
             InitializeComponent();
             showMessages();
+            Text = "Messaging App - Show Messages";
+            this.StartPosition = FormStartPosition.CenterScreen;
         }
         private void showMessages()
         {

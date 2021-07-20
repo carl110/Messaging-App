@@ -15,6 +15,8 @@ namespace Messaging_App
         public frmCreateMessage()
         {
             InitializeComponent();
+            Text = "Messaging App - New Message";
+            this.StartPosition = FormStartPosition.CenterScreen;
             //Hide MMS specific entry
             gboMultimediaType.Visible = false;
             lblFileName.Visible = false;

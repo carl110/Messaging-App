@@ -16,6 +16,8 @@ namespace Messaging_App
         public frmMainMenu()
         {
             InitializeComponent();
+            Text = "Messaging App - Main Menu";
+            this.StartPosition = FormStartPosition.CenterScreen;
         }
         private void btnViewMessages_Click(object sender, EventArgs e)
         {   //Hide from and open show messages
