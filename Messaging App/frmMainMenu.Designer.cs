@@ -29,10 +29,12 @@ namespace Messaging_App
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.btnViewMessages = new System.Windows.Forms.Button();
             this.btnCreateMessage = new System.Windows.Forms.Button();
             this.btnExit = new System.Windows.Forms.Button();
             this.btnHelp = new System.Windows.Forms.Button();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.SuspendLayout();
             // 
             // btnViewMessages
@@ -43,6 +45,7 @@ namespace Messaging_App
             this.btnViewMessages.Size = new System.Drawing.Size(464, 58);
             this.btnViewMessages.TabIndex = 0;
             this.btnViewMessages.Text = "&View Messages";
+            this.toolTip1.SetToolTip(this.btnViewMessages, "Click the button to view and delete messages");
             this.btnViewMessages.UseVisualStyleBackColor = true;
             this.btnViewMessages.Click += new System.EventHandler(this.btnViewMessages_Click);
             // 
@@ -54,6 +57,7 @@ namespace Messaging_App
             this.btnCreateMessage.Size = new System.Drawing.Size(464, 58);
             this.btnCreateMessage.TabIndex = 1;
             this.btnCreateMessage.Text = "&Create Messages";
+            this.toolTip1.SetToolTip(this.btnCreateMessage, "Click this button to create a new SMS or MMS");
             this.btnCreateMessage.UseVisualStyleBackColor = true;
             this.btnCreateMessage.Click += new System.EventHandler(this.btnCreateMessage_Click);
             // 
@@ -65,6 +69,7 @@ namespace Messaging_App
             this.btnExit.Size = new System.Drawing.Size(464, 58);
             this.btnExit.TabIndex = 3;
             this.btnExit.Text = "E&xit";
+            this.toolTip1.SetToolTip(this.btnExit, "Click here to close the application");
             this.btnExit.UseVisualStyleBackColor = true;
             this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
@@ -76,6 +81,7 @@ namespace Messaging_App
             this.btnHelp.Size = new System.Drawing.Size(464, 58);
             this.btnHelp.TabIndex = 2;
             this.btnHelp.Text = "&Help";
+            this.toolTip1.SetToolTip(this.btnHelp, "Click here for the help text");
             this.btnHelp.UseVisualStyleBackColor = true;
             this.btnHelp.Click += new System.EventHandler(this.btnHelp_Click);
             // 
@@ -100,6 +106,7 @@ namespace Messaging_App
         private System.Windows.Forms.Button btnCreateMessage;
         private System.Windows.Forms.Button btnExit;
         private System.Windows.Forms.Button btnHelp;
+        private System.Windows.Forms.ToolTip toolTip1;
     }
 }
 

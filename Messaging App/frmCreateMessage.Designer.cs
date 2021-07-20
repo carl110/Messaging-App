@@ -29,6 +29,7 @@ namespace Messaging_App
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -51,6 +52,7 @@ namespace Messaging_App
             this.lblFileName = new System.Windows.Forms.Label();
             this.txtFileName = new System.Windows.Forms.TextBox();
             this.btnCancel = new System.Windows.Forms.Button();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.gboMessageType.SuspendLayout();
             this.gboMultimediaType.SuspendLayout();
             this.SuspendLayout();
@@ -120,6 +122,7 @@ namespace Messaging_App
             this.gboMessageType.TabIndex = 5;
             this.gboMessageType.TabStop = false;
             this.gboMessageType.Text = "Type of Message";
+            this.toolTip1.SetToolTip(this.gboMessageType, "Select if this is an SMS or MMS ");
             // 
             // rdoMMS
             // 
@@ -156,6 +159,7 @@ namespace Messaging_App
             this.gboMultimediaType.TabIndex = 6;
             this.gboMultimediaType.TabStop = false;
             this.gboMultimediaType.Text = "MultiMedia Type";
+            this.toolTip1.SetToolTip(this.gboMultimediaType, "You must select on of the MultiMedia types for an MMS message");
             // 
             // rdoPicture
             // 
@@ -196,6 +200,7 @@ namespace Messaging_App
             this.txtSender.Name = "txtSender";
             this.txtSender.Size = new System.Drawing.Size(239, 26);
             this.txtSender.TabIndex = 0;
+            this.toolTip1.SetToolTip(this.txtSender, "Enter sender Details");
             // 
             // txtRecipient
             // 
@@ -203,6 +208,7 @@ namespace Messaging_App
             this.txtRecipient.Name = "txtRecipient";
             this.txtRecipient.Size = new System.Drawing.Size(239, 26);
             this.txtRecipient.TabIndex = 1;
+            this.toolTip1.SetToolTip(this.txtRecipient, "Enter recipient details");
             // 
             // txtMessage
             // 
@@ -211,6 +217,7 @@ namespace Messaging_App
             this.txtMessage.Name = "txtMessage";
             this.txtMessage.Size = new System.Drawing.Size(539, 114);
             this.txtMessage.TabIndex = 4;
+            this.toolTip1.SetToolTip(this.txtMessage, "Enter your main Text data");
             // 
             // cboStatus
             // 
@@ -223,6 +230,7 @@ namespace Messaging_App
             this.cboStatus.Size = new System.Drawing.Size(239, 28);
             this.cboStatus.TabIndex = 2;
             this.cboStatus.Text = "Sent";
+            this.toolTip1.SetToolTip(this.cboStatus, "Select igf message Sent or Recieved");
             // 
             // btnSend
             // 
@@ -231,6 +239,7 @@ namespace Messaging_App
             this.btnSend.Size = new System.Drawing.Size(137, 60);
             this.btnSend.TabIndex = 8;
             this.btnSend.Text = "&Send";
+            this.toolTip1.SetToolTip(this.btnSend, "Send your data once all of the fields are completed");
             this.btnSend.UseVisualStyleBackColor = true;
             this.btnSend.Click += new System.EventHandler(this.btnSend_Click);
             // 
@@ -241,6 +250,7 @@ namespace Messaging_App
             this.chkGroupMessage.Name = "chkGroupMessage";
             this.chkGroupMessage.Size = new System.Drawing.Size(22, 21);
             this.chkGroupMessage.TabIndex = 3;
+            this.toolTip1.SetToolTip(this.chkGroupMessage, "Check this box if the message is part of a group of messages");
             this.chkGroupMessage.UseVisualStyleBackColor = true;
             // 
             // lblFileName
@@ -248,7 +258,7 @@ namespace Messaging_App
             this.lblFileName.AutoSize = true;
             this.lblFileName.Location = new System.Drawing.Point(40, 445);
             this.lblFileName.Name = "lblFileName";
-            this.lblFileName.Size = new System.Drawing.Size(126, 30);
+            this.lblFileName.Size = new System.Drawing.Size(84, 20);
             this.lblFileName.TabIndex = 14;
             this.lblFileName.Text = "File Name:";
             // 
@@ -258,6 +268,7 @@ namespace Messaging_App
             this.txtFileName.Name = "txtFileName";
             this.txtFileName.Size = new System.Drawing.Size(239, 26);
             this.txtFileName.TabIndex = 7;
+            this.toolTip1.SetToolTip(this.txtFileName, "You must enter a file name for an MMS message");
             // 
             // btnCancel
             // 
@@ -266,6 +277,7 @@ namespace Messaging_App
             this.btnCancel.Size = new System.Drawing.Size(137, 60);
             this.btnCancel.TabIndex = 9;
             this.btnCancel.Text = "&Cancel";
+            this.toolTip1.SetToolTip(this.btnCancel, "Cancel the new message and go back to the main menu");
             this.btnCancel.UseVisualStyleBackColor = true;
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
@@ -326,5 +338,6 @@ namespace Messaging_App
         private System.Windows.Forms.Label lblFileName;
         private System.Windows.Forms.TextBox txtFileName;
         private System.Windows.Forms.Button btnCancel;
+        private System.Windows.Forms.ToolTip toolTip1;
     }
 }

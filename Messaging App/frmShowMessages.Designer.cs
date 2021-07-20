@@ -29,12 +29,14 @@ namespace Messaging_App
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.lstMessages = new System.Windows.Forms.ListBox();
             this.btnMainMenu = new System.Windows.Forms.Button();
             this.btnRead = new System.Windows.Forms.Button();
             this.btnDelete = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.SuspendLayout();
             // 
             // lstMessages
@@ -53,6 +55,7 @@ namespace Messaging_App
             this.btnMainMenu.Size = new System.Drawing.Size(230, 40);
             this.btnMainMenu.TabIndex = 3;
             this.btnMainMenu.Text = "Go Back to &Main Menu";
+            this.toolTip1.SetToolTip(this.btnMainMenu, "Click here t go back to the main menu");
             this.btnMainMenu.UseVisualStyleBackColor = true;
             this.btnMainMenu.Click += new System.EventHandler(this.btnMainMenu_Click);
             // 
@@ -73,6 +76,7 @@ namespace Messaging_App
             this.btnDelete.Size = new System.Drawing.Size(230, 40);
             this.btnDelete.TabIndex = 1;
             this.btnDelete.Text = "&Delete";
+            this.toolTip1.SetToolTip(this.btnDelete, "To delete a message, first highlight the message then click Delete");
             this.btnDelete.UseVisualStyleBackColor = true;
             this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
@@ -121,5 +125,6 @@ namespace Messaging_App
         private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.ToolTip toolTip1;
     }
 }
