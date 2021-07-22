@@ -96,6 +96,7 @@ namespace Messaging_App
             this.Controls.Add(this.btnViewMessages);
             this.Name = "frmMainMenu";
             this.Text = "Form1";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.frmMainMenu_FormClosed);
             this.ResumeLayout(false);
 
         }

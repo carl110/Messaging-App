@@ -19,11 +19,16 @@ namespace Messaging_App
             Text = "Messaging App - Main Menu";
             this.StartPosition = FormStartPosition.CenterScreen;
         }
+        private void frmMainMenu_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            //exit application when form is closed
+            Application.Exit();
+        }
         private void btnViewMessages_Click(object sender, EventArgs e)
         {   //Hide from and open show messages
             frmShowMessages showMessages = new frmShowMessages();
             this.Hide();
-            showMessages.ShowDialog();
+            showMessages.Show();
         }
         private void btnCreateMessage_Click(object sender, EventArgs e)
         {   //Hide form and show create message
